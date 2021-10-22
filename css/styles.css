@@ -651,7 +651,7 @@ body {
   transform: translate(-50%, -50%) scale(1.5);
 }
 
-.icon-close {
+.button-close__icon-close {
   width: 11px;
   height: 11px;
   transition: fill var(--transition-duration) var(--transition-time-function);
@@ -666,13 +666,16 @@ body {
   height: 30px;
   background: var(--primary-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-right: 8px;
-  margin-top: 8px;
   cursor: pointer;
 }
 
-.button-close:focus .icon-close,
-.button-close:hover .icon-close {
+.modal__button-close {
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.button-close:focus .button-close__icon-close,
+.button-close:hover .button-close__icon-close {
   fill: var(--accent-color);
 }
 
@@ -707,9 +710,13 @@ body {
   font-size: 20px;
   color: var(--title-text-color);
   letter-spacing: 0.03em;
+}
+
+.modal__callback-title {
   margin-bottom: 12px;
 }
-.callback-label {
+
+.callback-form__label {
   display: block;
   font-size: 12px;
   letter-spacing: 0.01em;
@@ -717,7 +724,7 @@ body {
   margin-bottom: 4px;
 }
 
-.callback-input {
+.callback-form__input {
   height: 40px;
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -729,7 +736,7 @@ body {
     var(--transition-time-function);
 }
 
-.callback-form__subscribe-input {
+.mailer-form__subscribe-input {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -739,28 +746,28 @@ body {
   outline: none;
 }
 
-.callback-form__subscribe-input::placeholder {
+.mailer-form__subscribe-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.callback-form__subscribe-input:focus {
+.mailer-form__subscribe-input:focus {
   border-color: var(--accent-color);
   color: white;
 }
 
-.callback-form__subscribe-input:not(:placeholder-shown) {
+.mailer-form__subscribe-input:not(:placeholder-shown) {
   border-color: var(--accent-color);
   color: white;
 }
 
-.form-field {
+.callback-form__input-block {
   margin-bottom: 10px;
 }
 
-.callback-comment {
+.callback-form__comment {
   padding: 12px 16px;
   height: 120px;
   width: 100%;
@@ -773,14 +780,14 @@ body {
     var(--transition-time-function);
 }
 
-.callback-comment::placeholder {
+.callback-form__comment::placeholder {
   font-size: 12px;
   letter-spacing: 0.01em;
   line-height: 1.167;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.callback-comment:focus {
+.callback-form__comment:focus {
   border-color: var(--accent-color);
 }
 
@@ -789,7 +796,7 @@ body {
   text-align: center;
 }
 
-.modal-checkbox-label {
+.callback-form__checkbox-label {
   line-height: 1.71;
   letter-spacing: 0.03em;
   display: flex;
@@ -804,13 +811,13 @@ body {
   margin: 0 auto;
 }
 
-.input-wrapper {
+.callback-form__input-wrapper {
   position: relative;
   display: block;
   height: 100%;
 }
 
-.callback-icon {
+.callback-form__icon {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -820,20 +827,20 @@ body {
   transition: fill var(--transition-duration) var(--transition-time-function);
 }
 
-.callback-input:focus + .callback-icon {
+.callback-form__input:focus + .callback-form__icon {
   fill: var(--accent-color);
 }
 
-.callback-input:focus {
+.callback-form__input:focus {
   border-color: var(--accent-color);
 }
 
-.modal-link {
+.callback-form__modal-link {
   color: var(--accent-color);
   text-decoration-skip-ink: none;
 }
 
-.modal-checkbox-label span {
+.callback-form__icon-wrapper {
   height: 16px;
   width: 15px;
   border: 1.8px solid var(--title-text-color);
@@ -842,6 +849,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   transition: background-color var(--transition-duration)
       var(--transition-time-function),
     border-color var(--transition-duration) var(--transition-time-function);
@@ -852,17 +860,19 @@ body {
   width: 11px;
 }
 
-.callback-checkbox:checked + .modal-checkbox-label span {
+.callback-form__checkbox:checked
+  + .callback-form__checkbox-label
+  .callback-form__icon-wrapper {
   background-color: var(--accent-color);
   border: none;
 }
 
-.modal-checkbox-label span {
-  cursor: pointer;
-}
-
-.modal-checkbox-label:hover span,
-.callback-checkbox:focus + .modal-checkbox-label span {
+.callback-form__checkbox-label:hover
+  + .callback-form__checkbox-label
+  .callback-form__icon-wrapper,
+.callback-form__checkbox:focus
+  + .callback-form__checkbox-label
+  .callback-form__icon-wrapper {
   border: 1.8px solid var(--accent-color);
 }
 
