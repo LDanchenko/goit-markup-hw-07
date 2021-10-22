@@ -258,25 +258,23 @@ body {
   background-color: var(--accent-color);
   color: var(--primary-background-color);
 }
-.portfolio-buttons .btn:hover,
-.portfolio-buttons .btn:focus {
+.portfolio-buttons__item .button:hover,
+.portfolio-buttons__item .button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button_color_blue {
   padding: 10px 32px;
-  background-color: var(--accent-color);
-  color: var(--primary-background-color);
   font-weight: 700;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   min-width: 200px;
 }
 
-.btn-portfolio {
+.button_enabled,
+.button_color_blue {
   background-color: var(--accent-color);
   color: var(--primary-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -364,7 +362,7 @@ body {
   color: var(--accent-color);
 }
 
-.portfolio-item .card-heading {
+.portfolio-list__item-title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -433,19 +431,21 @@ body {
 
 .portfolio-buttons {
   display: flex;
-  margin-bottom: 50px;
   justify-content: center;
 }
+.container__portfolio-buttons {
+  margin-bottom: 50px;
+}
 
-.portfolio-buttons li:not(:last-child) {
+.portfolio-buttons__item:not(:last-child) {
   margin-right: 8px;
 }
-.portfolio-item .card-text {
+.portfolio-list__item-description {
   font-size: 16px;
   line-height: 1.875;
 }
 
-.portfolio-item-link {
+.portfolio-list__link {
   color: inherit;
   display: block;
   transition: box-shadow var(--transition-duration)
@@ -455,24 +455,26 @@ body {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+}
+
+.container__portfolio-list {
   margin-right: calc(-1 * var(--card-set-gap));
   margin-bottom: calc(-1 * var(--card-set-gap));
 }
-
-.portfolio-item {
+.portfolio-list__item {
   margin-right: var(--card-set-gap);
   margin-bottom: var(--card-set-gap);
   flex-basis: calc((100% / 3) - var(--card-set-gap));
 }
 
-.portfolio-item .portfolio-item-link:hover,
-.portfolio-item .portfolio-item-link:focus {
+.portfolio-list__link:hover,
+.portfolio-list__link:focus {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-card-content {
+.portfolio-list__content {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: 0;
@@ -679,11 +681,11 @@ body {
   fill: var(--accent-color);
 }
 
-.portfolio-item-thumb {
+.portfolio-list__thumb {
   position: relative;
   overflow: hidden;
 }
-.portfolio-item-caption {
+.portfolio-list__caption-wrapper {
   position: absolute;
   top: 100%;
   background: rgba(33, 150, 243, 0.9);
@@ -692,15 +694,15 @@ body {
     var(--transition-time-function);
 }
 
-.portfolio-item-caption p {
+.portfolio-list__caption {
   color: var(--primary-background-color);
   font-size: 18px;
   line-height: 1.56;
   padding: 63px 24px;
 }
 
-.portfolio-item-link:hover .portfolio-item-caption,
-.portfolio-item-link:focus .portfolio-item-caption {
+.portfolio-list__link:hover .portfolio-list__caption-wrapper,
+.portfolio-list__link:focus .portfolio-list__caption-wrapper {
   transform: translateY(-100%);
 }
 
