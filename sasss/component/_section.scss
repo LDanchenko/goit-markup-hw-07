@@ -1,0 +1,14 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  &__container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &_pin_up {
+    padding-top: 0;
+  }
+  &_color_grey {
+    background-color: $elements-background-color;
+  }
+}

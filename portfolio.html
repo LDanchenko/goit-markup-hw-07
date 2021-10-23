@@ -13,50 +13,43 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="page-header">
-      <div class="container container_centered page-header__navigation">
+      <div class="container page-header__navigation">
         <nav class="menu-navigation">
-          <a href="./index.html" class="logo logo_position_header link"
+          <a href="./index.html" class="logo logo_color_black"
             ><span class="logo__span">Web</span>Studio
           </a>
-          <ul class="list-navigation menu-navigation_list-navigation list">
-            <li class="list-navigation__item">
-              <a href="./index.html" class="link list-navigation__link"
-                >Студия</a
-              >
+          <ul class="menu-navigation__list">
+            <li class="menu-navigation__item">
+              <a href="./index.html" class="menu-navigation__link">Студия</a>
             </li>
-            <li class="list-navigation__item">
+            <li class="menu-navigation__item">
               <a
                 href="./portfolio.html"
-                class="link list-navigation__link list-navigation__link_current"
+                class="menu-navigation__link menu-navigation__link_current"
                 >Портфолио</a
               >
             </li>
-            <li class="list-navigation__item">
-              <a href="./index.html" class="link list-navigation__link"
-                >Контакты</a
-              >
+            <li class="menu-navigation__item">
+              <a href="./index.html" class="menu-navigation__link">Контакты</a>
             </li>
           </ul>
         </nav>
-        <ul class="list-contacts list">
-          <li class="list-contacts__item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="list-contacts__link link"
-            >
-              <svg class="list-contacts__icon" width="16" height="12">
+        <ul class="contacts-list">
+          <li class="contacts-list__item">
+            <a href="mailto:info@devstudio.com" class="contacts-list__link">
+              <svg class="contacts-list__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li class="list-contacts__item">
-            <a href="tel:+380961111111" class="list-contacts__link link">
-              <svg class="list-contacts__icon" width="10" height="16">
+          <li class="contacts-list__item">
+            <a href="tel:+380961111111" class="contacts-list__link">
+              <svg class="contacts-list__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -66,10 +59,10 @@
       </div>
     </header>
     <main>
-      <section class="section">
+      <section class="section portfolio">
         <div class="container section__container">
           <h1 class="visually-hidden">Портфолио</h1>
-          <ul class="list portfolio-buttons container__portfolio-buttons">
+          <ul class="portfolio-buttons container__portfolio-buttons">
             <li class="portfolio-buttons__item">
               <button type="button" class="button button_enabled">Все</button>
             </li>
@@ -86,9 +79,9 @@
               <button type="button" class="button">Маркетинг</button>
             </li>
           </ul>
-          <ul class="portfolio-list container__portfolio-list list">
+          <ul class="portfolio-list container__portfolio-list">
             <li class="portfolio-list__item">
-              <a href="" class="link portfolio-list__link">
+              <a href="" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
                   <img src="./images/portfolio-1.jpg" alt="Ноутбук" />
                   <div class="portfolio-list__caption-wrapper">
@@ -289,66 +282,63 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container footer__container">
-        <!--вопрос оба дива-->
-        <div class="container__column">
-          <a href="./index.html" class="logo logo_position_footer link"
+      <div class="container section__container footer-wrapper">
+        <div class="footer-wrapper__item">
+          <a href="./index.html" class="logo logo_color_white"
             ><span class="logo__span">Web</span>Studio
           </a>
-          <!--вопрос-->
 
           <address class="footer-address">
-            <ul class="footer-list list">
-              <li class="footer-list__item">
+            <ul class="address-list">
+              <li class="address-list__item">
                 <a
                   href="https://goo.gl/maps/j5LTMicuxcYMiGvK8"
                   target="_blank"
                   rel="noreferrer noopener"
-                  class="link footer-list__link footer-list__link_white"
+                  class="address-list__link address-list__link_color_white"
                 >
                   г. Киев, пр-т Леси Украинки, 26
                 </a>
               </li>
-              <li class="footer-list__item">
-                <a href="mailto:info@example.com" class="link footer-list__link"
+              <li class="address-list__item">
+                <a href="mailto:info@example.com" class="address-list__link"
                   >info@example.com</a
                 >
               </li>
-              <li class="footer-list__item">
-                <a href="tel:+380991111111" class="link footer-list__link"
+              <li class="address-list__item">
+                <a href="tel:+380991111111" class="address-list__link"
                   >+38 099 111 11 11</a
                 >
               </li>
             </ul>
           </address>
         </div>
-        <div class="container__column">
-          <!--вопрос-->
-          <p class="footer-text">Присоединяйтесь</p>
-          <ul class="social-links list">
+        <div class="footer-wrapper__item">
+          <p class="action-text">Присоединяйтесь</p>
+          <ul class="social-links">
             <li class="social-links__item">
-              <a href="" class="social-links__link link">
+              <a href="" class="social-links__link">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-links__item">
-              <a href="" class="social-links__link link">
+              <a href="" class="social-links__link">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-links__item">
-              <a href="" class="social-links__link link">
+              <a href="" class="social-links__link">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-links__item">
-              <a href="" class="social-links__link link">
+              <a href="" class="social-links__link">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
@@ -356,9 +346,9 @@
             </li>
           </ul>
         </div>
-        <div class="container__column">
+        <div class="footer-wrapper__item">
           <form class="mailer-form">
-            <p class="footer-text">Подпишитесь на рассылку</p>
+            <p class="action-text">Подпишитесь на рассылку</p>
             <input
               type="email"
               name="email"
@@ -372,7 +362,7 @@
             <!--вопрос-->
             <button
               type="submit"
-              class="button button_color_blue subscribe-button"
+              class="button button_color_blue button_icon_subscribe"
             >
               Подписаться
             </button>

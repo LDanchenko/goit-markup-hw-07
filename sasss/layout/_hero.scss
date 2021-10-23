@@ -1,0 +1,33 @@
+.section-hero {
+  max-width: 1600px;
+  padding-bottom: 200px;
+  padding-top: 200px;
+  color: $primary-background-color;
+  background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
+    url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $hero-background-color;
+
+  text-align: center;
+
+  &__title {
+    max-width: 696px;
+    margin: 0 auto;
+    margin-bottom: $card-set-gap;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    @include fonts(44px, 1.36, 0.06em, 900);
+    text-transform: uppercase;
+  }
+}
+
+.hero-wrapper {
+  &__section-hero {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
